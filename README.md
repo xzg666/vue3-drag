@@ -1,53 +1,91 @@
-# `Vite + Vue 3 + Tailwind CSS (starter) ⚡`
+## vue 实战
+0-10 扯淡
 
-![Vite, Vue, Tailwind CSS](https://user-images.githubusercontent.com/11320080/111277027-a9384c00-8640-11eb-8323-21889bd7c609.png)
 
-This starter template also includes:
+### 主要内容
+1. 搭建物料库
+- `utils/options.jsx`
 
-- [Vue Router 4.x](https://github.com/vuejs/vue-router-next)
-- [Inter var font](https://github.com/rsms/inter) (self-hosted, woff2, v3.19, with 'preload' attr, check out index.html)
-- [Just-in-Time](https://tailwindcss.com/docs/just-in-time-mode) mode by default introduced in Tailwind CSS v2.1 (in preview!)
-- [Headless UI](https://headlessui.dev/vue/menu) - unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS
-- [Heroicons](https://github.com/tailwindlabs/heroicons#vue) - beautiful hand-crafted SVG icons,
-by the makers of Tailwind CSS
+2. 渲染物料库在界面上，满足物料可拖拽
+- `componnets/Materials.vue`
 
-First-party plugins needed for Tailwind UI:
+3. 设计主舞台
+- `components/PlayGround.vue`
 
-- [tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms)
-- [tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
-- [tailwindcss/line-clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)
-- [tailwindcss/aspect-ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
+4. 存储舞台信息
+- `utils/data.js`
 
-### Getting Started 🚀
+5. 舞台数据渲染
+- 对应到 data 这个“全局”的数据
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/web2033/vite-vue3-tailwind-starter)
+6. 设置拖动的内容
+- `components/Options.vue`
 
-```sh
-npx degit web2033/vite-vue3-tailwind-starter vvt-app
-cd vvt-app
+### 两个变量
+1. 在运行前： 物料的初始化 -- 物料库的数据
+2. 运行时： 在物料被放置的时候，我可以动态在运行时，拿到物料的数据。
+
+### 撤销和前进
+```js
+const state = {
+    current : -1, // 前进、后退的索引值；
+    commandList: [], // 存放着命令
+    commands: {}, // 命令的映射表
+}
+```
+### 辅助线
+10条辅助线
+
+```js
+
 ```
 
-npm:
-```sh
-npm i
-npm run dev
-npm run build
-npm run serve
-```
+### 先说两件事
 
-yarn:
-```sh
-yarn
-yarn dev
-yarn build
-yarn serve
-```
+#### 薪酬是什么决定的？
+知乎 -- “穷人如何翻身”。 -- 做细分领域专家。
+#### 产品是如何定价的？
+《产品方法论》 -- “ 企业通过产品和用户交换价值。 ”
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/web2033/vite-vue3-tailwind-starter)
+#### 推荐一本书
+《Vue.js 设计与实现》 -- 观点输出。
 
-#### Bonus links
-- [Enabling https on localhost](https://github.com/web2033/vite-vue3-tailwind-starter/discussions/112) (dev notes)
-- [Vite dev server with netlify dev support](https://github.com/web2033/vite-vue3-tailwind-starter/discussions/113) (dev notes)
-- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - recommended (instead of Vetur) VSCode extension built specifically for Vue 3
-- [Pinia](https://pinia.esm.dev/introduction.html) - state-management alternative to Vuex 4 with a similar to upcoming Vuex 5 API
-- [VueUse](https://vueuse.org/functions.html) - collection of essential Vue Composition Utilities
+#### 职业规划
+##### 技术
+    - P8 可以止步。
+    - 陈成 - 云谦。 P8
+    - antfu, 尤雨溪。- 35岁.
+    - 细分领域技术专家
+    - 前端搭建，低代码
+    - WebGL -- 元宇宙
+##### 管理
+    - 纯管理
+    - 一线技术leader 。
+##### 业务
+    - 横向有发展。 
+        - 算法。。。
+        - 后端
+        - 产品
+        - 设计
+        - 市场。。。
+
+
+35岁还有发展吗？
+怎么建立自己的学习计划？
+
+#### 个人规划
+##### 1-3 技术广度  P5
+##### 3-5 技术深度  P6
+##### 5年以上 行业认知，团队，管理，平衡。 P7
+
+这个世界有太多唾手可得的学习资料，重要的是：
+- 如何在这些海量的学习资料里，甄别对自己有用的内容；
+- 如何给自己制定合理的学习计划，让自己始终处在“学习区”；
+- 如何把这些知识有效地内化，熟练的使用，短时间内形成经验；
+- 如何洞悉领导、企业以及市场的导向与方向，让自己的技术快速变现。
+
+
+前端早早聊。话题。
+ant 蚂蚁团队。
+群核 -- 酷家乐。
+
